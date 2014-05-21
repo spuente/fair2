@@ -1,4 +1,6 @@
 Fair2::Application.routes.draw do
+  resources :projects
+
   resources :comments
 
   resources :spectators
