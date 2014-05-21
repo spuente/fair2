@@ -1,0 +1,31 @@
+<h1>Listing spectators</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spectators.each do |spectator| %>
+      <tr>
+        <td><%= spectator.name %></td>
+        <td><%= spectator.lastname %></td>
+        <td><%= spectator.email %></td>
+        <td><%= link_to 'Show', spectator %></td>
+        <td><%= link_to 'Edit', edit_spectator_path(spectator) %></td>
+        <td><%= link_to 'Destroy', spectator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spectator', new_spectator_path %>

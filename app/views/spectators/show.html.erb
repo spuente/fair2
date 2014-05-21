@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spectator.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @spectator.lastname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @spectator.email %>
+</p>
+
+<%= link_to 'Edit', edit_spectator_path(@spectator) %> |
+<%= link_to 'Back', spectators_path %>
